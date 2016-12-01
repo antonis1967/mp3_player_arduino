@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial Geno(1, 0); // Rx , Tx
+SoftwareSerial Geno(0, 1); // Rx , Tx
 
 unsigned char Data[10];
 unsigned char i;
@@ -8,7 +8,7 @@ void setup() {
 
   // 初始化数字引脚，使其为输出状态。
   // 大部分Arduino控制板上，数字13号引脚都有一颗Led。
-  pinMode(13, OUTPUT);
+  //pinMode(13, OUTPUT);
 
   delay(1000);
   Geno.begin(9600);
@@ -61,13 +61,15 @@ void Command(unsigned char *Data, int length) {
 
 void loop() {
 
-  digitalWrite(13, HIGH);   // 使Led亮
+  /*digitalWrite(13, HIGH);   // 使Led亮
   delay(1000);              // 持续1秒钟
   digitalWrite(13, LOW);    // 使Led灭
-  delay(1000);              // 持续1秒钟。
+  delay(1000);              // 持续1秒钟。*/
 
   playTrack(1);
-
+  delay(2000);
+  
   playTrack(2);
+  delay(2000);
 
 }
