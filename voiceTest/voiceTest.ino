@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial Geno(7, 8); // Rx , Tx
+SoftwareSerial Geno(1, 0); // Rx , Tx
 
 unsigned char Data[10];
 unsigned char i;
