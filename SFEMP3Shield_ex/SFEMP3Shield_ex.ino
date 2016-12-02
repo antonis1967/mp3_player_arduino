@@ -1,6 +1,6 @@
 #include <SPI.h>
 #include <SdFat.h>
-#include <SdFatUtil.h> 
+#include <SdFatUtil.h>
 #include <SFEMP3Shield.h>
 
 SdFat sd;
@@ -23,7 +23,7 @@ void loop() {
   //start playing track 1
   MP3player.playTrack(1);
   delay(2000);
-  
+
   MP3player.playTrack(2);
   delay(2000);
 }
